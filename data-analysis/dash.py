@@ -9,6 +9,12 @@ from pymongo.server_api import ServerApi
 
 load_dotenv() 
 
+st.set_page_config(
+    page_title="Analisador de Investimentos",
+    layout="wide",  # Faz com que a aplicação use toda a largura
+    initial_sidebar_state="collapsed"  # Oculta a sidebar inicialmente
+)
+
 # mongodb_URI = os.getenv("mongodb_URI")
 # mongodb_URI = st.secrets["database"]["uri"]
 mongodb_URI = os.getenv("MONGO_URI")
