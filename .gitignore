@@ -140,3 +140,4 @@ config.js
 /data-analysis/venv
 /backend/.env
 .env
+.streamlit/

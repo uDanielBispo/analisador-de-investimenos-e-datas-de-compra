@@ -2,13 +2,15 @@ import pandas as pd
 import plotly.express as px
 import os
 from dotenv import load_dotenv
+import streamlit as st
 
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
 
 load_dotenv()
 
-mongodb_URI = os.getenv("mongodb_URI")
+# mongodb_URI = os.getenv("mongodb_URI")
+mongodb_URI = st.secrets["database"]["uri"]
 uri = mongodb_URI
 
 client = MongoClient(uri, server_api=ServerApi('1'))
