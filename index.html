@@ -5,42 +5,54 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Analisador de Investimentos</title>
-  
+
   <script type="module" src="./asset-filter.js"></script>
   <script type="module" src="./save-purchase.js"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns"></script>
-  <!-- <script type="module" src="./charts.js"></script>
-
-  <script src="https://cdn.jsdelivr.net/npm/danfojs@1.1.2/lib/bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/luxon@3/build/global/luxon.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-luxon@1"></script> -->
 
   <link rel="stylesheet" href="index.css" />
+  <style>
+    
+  </style>
 </head>
 
 <body>
-  <div class="container">
-    <h1>Analisador de Investimentos</h1>
 
-    <div class="form-group">
-      <input type="text" name="asset-input" id="asset-input" placeholder="Pesquise uma ação" />
-    </div>
-    <div class="form-group">
-      <input type="number" name="asset-value-input" id="asset-value-input" placeholder="Valor da cota" />
-    </div>
-    <div class="form-group">
-      <input type="number" name="qtt-purchased-input" id="qtt-purchased-input" placeholder="Quantidade comprada" />
-    </div>
-    <div class="form-group">
-      <input type="date" name="purchase-date" id="purchase-date" />
+  <h1>Analisador de Investimentos</h1>
+
+  <div class="wrapper">
+
+    <div class="form-container">
+      <h2>Nova Compra</h2>
+
+      <div class="form-group">
+        <input type="text" name="asset-input" id="asset-input" placeholder="Ex: PETR4, VALE3, BBAS3" />
+      </div>
+      <div class="form-group">
+        <input type="number" name="asset-value-input" id="asset-value-input" placeholder="Valor da Cota (R$)" />
+      </div>
+      <div class="form-group">
+        <input type="number" name="qtt-purchased-input" id="qtt-purchased-input" placeholder="Quantidade comprada" />
+      </div>
+      <div class="form-group">
+        <input type="date" name="purchase-date" id="purchase-date" />
+      </div>
+
+      <input type="button" value="Salvar Compra" id="save-purchase-button" />
+
+      <!-- Galeria de ativos adicionada aqui -->
+      <div class="asset-galery" id="asset-galery"></div>
     </div>
 
-    <input type="button" value="Salvar compra" id="save-purchase-button" />
+    <div class="graph-container">
+      <h2>Histórico de Compras</h2>
+      <iframe src="https://analisador-de-investimenos-e-datas-de.onrender.com/"></iframe>
+    </div>
+
   </div>
 
-  <div class="asset-galery" id="asset-galery"></div>
-
 </body>
+
 </html>

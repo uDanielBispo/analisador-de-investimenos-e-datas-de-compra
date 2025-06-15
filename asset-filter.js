@@ -33,6 +33,7 @@ function showAssets(){
 
         button.type = "button";
         button.value = asset;
+        button.className = "assetOption"
         button.addEventListener("click", () => setAssetChosed(asset));
 
         div.appendChild(button);
