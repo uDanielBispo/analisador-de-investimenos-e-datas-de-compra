@@ -1,14 +1,10 @@
 import pandas as pd
-import matplotlib.pyplot as plt
 import plotly.express as px
-import seaborn as sns
-import streamlit as st
+import os
+from dotenv import load_dotenv
 
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
-
-import os
-from dotenv import load_dotenv
 
 load_dotenv()
 
