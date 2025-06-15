@@ -1,0 +1,1 @@
+# analisador-de-investimenos-e-datas-de-compra
